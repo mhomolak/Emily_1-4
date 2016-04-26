@@ -4,16 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script type="text/javascript">
-      angular.module('comicBux', [])
-      .controller('ComicBookController', function($scope) {
-        $scope.comicBook = "Xmen"
-        $scope.subject = "Batdood"
-        $scope.tellMe = function(){
-          return "OMG I love " + $scope.comicBook
-        }
-      });
-    </script>
+    <script src="app.js"></script>
     <title>Angular MVC</title>
   </head>
   <body>
@@ -38,7 +29,6 @@
         </div>
       </div>
       <span ng-bind="tellMe()"></span>
-      {{ tellMe() }}
     </div>
   </body>
 </html>

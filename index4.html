@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jsonification">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript">
+      var app = angular.module('jsonification', []);
+
+      app.controller('JsonController', function($scope) {
+        $scope.jsonObject = {
+          "key": "value",
+          "comicBook": true,
+          "Angular": [
+            2,
+            6,
+            9
+          ],
+          "something": {
+            "wicked": "Boston",
+            "420": "Denver"
+          }
+        }
+      });
+    </script>
+    <title>Expressions and Filters</title>
+  </head>
+  <body>
+    <div class="container" ng-controller="JsonController">
+      <h1>Expressions and Filters</h1>
+      <h3>Not filtered</h3>
+      <pre>
+        <code>{{ jsonObject }}</code>
+      </pre>
+      <h3>Filtered with Json</h3>
+      <pre>
+        <code>{{ jsonObject | json}}</code>
+      </pre>
+    </div>
+  </body>
+</html>
