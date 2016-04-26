@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <title>Data Binding</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Data Binding</h1>
+    <h3>My Favorite Comic Book is: <span ng-bind="comicBook"></span> about {{
+    subject }}</h3>
+    <div class="row">
+      <div class="six columns">
+        <label for="comicBook">My Favorite Comic Book is</label>
+        <input class="u-full-width" id="comicBook" type="text" ng-model="comicBook">
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <label for="subject">Subject</label>
+        <select class="u-full-width" id="subject" ng-model="subject">
+         <option value="Xmen">X-men</option>
+         <option value="Batdood">Batguy</option>
+         <option value="Something">Yuh</option>
+       </select>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
